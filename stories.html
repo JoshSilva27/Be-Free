@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Be Free | Anonymous Stories</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+  <header class="header">
+    <h1>Anonymous Stories</h1>
+    <p>Your voice matters. Share without fear. Read without judgment.</p>
+  </header>
+
+  <main class="forum-container">
+
+    <section class="post-form">
+      <h2>Share Your Story</h2>
+
+      <input type="text" id="sobrietyTime" placeholder="Sobriety time (optional — e.g., 14 days, 3 months)" />
+
+      <select id="storyTag">
+        <option value="All">Choose a tag</option>
+        <option value="Hope">Hope</option>
+        <option value="Relapse">Relapse</option>
+        <option value="Family">Family</option>
+        <option value="First Week">First Week</option>
+        <option value="Milestone">Milestone</option>
+        <option value="Rock Bottom">Rock Bottom</option>
+      </select>
+
+      <textarea id="storyText" placeholder="Write your story here..." rows="6"></textarea>
+
+      <label class="consent">
+        <input type="checkbox" id="consentBox">
+        I understand this will be shared anonymously to help others.
+      </label>
+
+      <button onclick="submitStory()">Share Anonymously</button>
+    </section>
+
+    <section class="filters">
+      <h2>Filter Stories</h2>
+      <select id="filterTag" onchange="renderStories()">
+        <option value="All">All</option>
+        <option value="Hope">Hope</option>
+        <option value="Relapse">Relapse</option>
+        <option value="Family">Family</option>
+        <option value="First Week">First Week</option>
+        <option value="Milestone">Milestone</option>
+        <option value="Rock Bottom">Rock Bottom</option>
+      </select>
+    </section>
+
+    <section id="storyFeed" class="story-feed">
+      <!-- Stories appear here -->
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Be Free — Anonymous. Supportive. Human.</p>
+  </footer>
+
+  <script src="stories.js"></script>
+
+</body>
+</html>
